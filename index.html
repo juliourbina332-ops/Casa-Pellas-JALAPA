@@ -1,71 +1,244 @@
-# 🏢 Caso de Estudio: Casa Pellas Nicaragua
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Pellas - Caso de Estudio e Innovación</title>
+    <style>
+        :root {
+            --primary: #003366;
+            --secondary: #d4af37;
+            --dark: #222222;
+            --light: #f4f6f9;
+            --white: #ffffff;
+            --text: #444444;
+        }
 
-¡Bienvenido al repositorio de análisis sobre **Casa Pellas**! Este espacio está dedicado a recopilar información, datos de mercado y la trayectoria de una de las empresas líderes en el sector automotriz y de distribución en Nicaragua.
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
----
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-## 📌 Índice
-1. [Sobre Casa Pellas](#-sobre-casa-pellas)
-2. [Marcas Principales](#-marcas-principales)
-3. [Impacto Económico y Social](#-impacto-económico-y-social)
-4. [Tecnologías y Modernización](#-tecnologías-y-modernización)
-5. [Contribuciones](#-contribuciones)
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary);
+        }
 
----
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-## 🏢 Sobre Casa Pellas
+        header p {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-Fundada en **1913**, Casa Pellas ha sido un pilar fundamental en el desarrollo económico de Nicaragua. Lo que comenzó como un negocio familiar de importación se transformó en el distribuidor exclusivo de marcas de prestigio mundial.
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-* **Misión:** Proveer soluciones de movilidad y servicios de alta calidad que superen las expectativas de nuestros clientes.
-* **Visión:** Mantener el liderazgo en el mercado nacional, innovando en la experiencia del cliente y la sostenibilidad.
+        section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
 
----
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--secondary);
+            padding-left: 15px;
+        }
 
-## 🚗 Marcas Principales
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
 
-Casa Pellas es reconocida principalmente por su portafolio de vehículos y maquinaria:
+        .stats-box {
+            background-color: #eef2f7;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary);
+        }
 
-| Sector | Marcas Destacadas |
-| :--- | :--- |
-| **Automóviles** | Toyota, Suzuki, Lexus |
-| **Comercial / Carga** | Hino, Toyota Commercial |
-| **Motocicletas** | Yamaha |
-| **Lubricantes y Repuestos** | ExxonMobil, repuestos genuinos |
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
----
+        ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
 
-## 🌱 Impacto Económico y Social
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
 
-Más allá de los negocios, el grupo se destaca por su enfoque en **Responsabilidad Social Empresarial (RSE)**:
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 1rem;
+        }
 
-* **Educación Vial:** Campañas constantes para la prevención de accidentes y el manejo seguro.
-* **Desarrollo Comunitario:** Apoyo a clínicas médicas y programas educativos en las zonas donde operan sus sucursales.
-* **Sostenibilidad:** Iniciativas para el manejo responsable de desechos de talleres (aceites, baterías y llantas).
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
 
----
+        th {
+            background-color: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
 
-## 💻 Tecnologías y Modernización
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
 
-*(Nota: Si este repositorio es para un proyecto de software/datos, puedes detallar esta sección)*
+        footer {
+            background-color: var(--dark);
+            color: #aaaaaa;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+            margin-top: 60px;
+            border-top: 3px solid var(--secondary);
+        }
 
-Este proyecto analiza cómo una empresa centenaria se adapta a la era digital:
-* **CRM e Inteligencia de Negocios:** Optimización de la atención al cliente y seguimiento de postventa.
-* **E-commerce:** Plataformas digitales para la cotización de vehículos y compra de repuestos en línea.
-* **Análisis de Datos:** Modelos predictivos para el inventario de repuestos según la demanda del parque vehicular nicaragüense.
+        footer p {
+            margin-bottom: 5px;
+        }
 
----
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: monospace;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
 
-## 🤝 Contribuciones
+    <header>
+        <h1>Casa Pellas</h1>
+        <p>Repositorio de Análisis, Transformación Digital y Caso de Estudio Empresarial en Nicaragua</p>
+    </header>
 
-Este es un proyecto con fines educativos e informativos. Si deseas agregar datos, análisis de mercado o mejorar el formato:
+    <div class="container">
 
-1. Haz un **Fork** al proyecto.
-2. Crea una nueva rama (`git checkout -b feature/nueva-mejora`).
-3. Haz un **Commit** con tus cambios (`git commit -m 'Añadida información sobre sucursales'`).
-4. Haz un **Push** a la rama (`git push origin feature/nueva-mejora`).
-5. Abre un **Pull Request**.
+        <section id="sobre-nosotros">
+            <h2>Sobre la Trayectoria</h2>
+            <p>Fundada en <strong>1913</strong>, Casa Pellas se ha consolidado como la empresa líder en el sector automotriz y de soluciones de movilidad en Nicaragua. Con más de un siglo de historia, ha evolucionado desde la importación de mercancías generales hasta convertirse en el pilar fundamental de distribución de marcas globales de alto prestigio.</p>
+            <div class="stats-box">
+                <strong>Ejes clave del éxito continuo:</strong> Centrado en la experiencia del cliente, solidez financiera, redes logísticas avanzadas y un firme compromiso con la sostenibilidad en el mercado nicaragüense.
+            </div>
+        </section>
 
----
+        <section id="marcas">
+            <h2>Portafolio de Marcas Representadas</h2>
+            <p>Casa Pellas destaca por mantener exclusividades y alianzas estratégicas con los fabricantes más importantes del mundo:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Línea de Negocio</th>
+                        <th>Marcas Principales</th>
+                        <th>Segmentación de Mercado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Automóviles y SUVs</strong></td>
+                        <td>Toyota, Suzuki, Lexus</td>
+                        <td>Comercial, Pasajeros, Premium</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transporte Pesado</strong></td>
+                        <td>Hino, Toyota Commercial</td>
+                        <td>Logística, Carga, Industrias</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dos Ruedas</strong></td>
+                        <td>Yamaha</td>
+                        <td>Trabajo, Mensajería, Deportivo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Postventa y Cuidado</strong></td>
+                        <td>ExxonMobil, Repuestos Genuinos</td>
+                        <td>Mantenimiento Automotriz General</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-*Descargo de responsabilidad: Este repositorio no está afiliado, asociado, autorizado ni respaldado oficialmente por Casa Pellas S.A.*
+        <section id="tecnologia">
+            <h2>Modernización e Innovación Tecnológica</h2>
+            <p>Este repositorio web almacena el análisis sobre las implementaciones de TI y transformación del modelo de negocios tradicional al ecosistema digital:</p>
+            <ul>
+                <li><strong>Arquitectura CRM Avanzada:</strong> Automatización en el seguimiento del ciclo de vida del cliente (desde la prospección hasta el servicio postventa).</li>
+                <li><strong>Sistemas Predictivos de Inventario:</strong> Analítica de datos aplicada a la demanda de repuestos según el crecimiento del parque vehicular del país.</li>
+                <li><strong>Canales Digitales Integrados:</strong> Cotizadores web interactivos, agendamiento en línea para talleres y plataformas B2B para talleres afiliados.</li>
+            </ul>
+        </section>
+
+        <section id="rse">
+            <h2>Sostenibilidad y RSE</h2>
+            <p>El impacto del grupo va más allá de lo comercial a través de programas permanentes de Responsabilidad Social Empresarial:</p>
+            <ul>
+                <li><strong>Educación Vial y Manejo Seguro:</strong> Capacitación activa a conductores de flotas comerciales y motociclistas.</li>
+                <li><strong>Gestión Ambiental Certificada:</strong> Disposición eco-responsable de aceites usados, baterías y neumáticos en la red de talleres a nivel nacional.</li>
+                <li><strong>Apoyo Comunitario:</strong> Alianzas de salud y educación en las cabeceras departamentales de Nicaragua.</li>
+            </ul>
+        </section>
+
+        <section id="despliegue">
+            <h2>Instrucciones para este Repositorio</h2>
+            <p>Si estás clonando este sitio para fines académicos, de desarrollo o análisis de datos, puedes inicializarlo localmente mediante Git:</p>
+            <pre>git clone https://github.com/TU-USUARIO/nombre-repositorio.git&#10;cd nombre-repositorio</pre>
+            <p style="margin-top: 15px;">Para habilitar la visualización web gratuita, simplemente activa <strong>GitHub Pages</strong> en la sección de <em>Settings</em> de tu repositorio y selecciona la rama principal como fuente.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Proyecto Académico / Caso de Estudio Informático.</p>
+        <p style="font-size: 0.8rem; color: #777777;">Aviso: Este sitio web ha sido desarrollado con fines ilustrativos y educativos. No representa una página oficial ni vinculante de Casa Pellas S.A.</p>
+    </footer>
+
+</body>
+</html>
