@@ -1,0 +1,71 @@
+# 🏢 Caso de Estudio: Casa Pellas Nicaragua
+
+¡Bienvenido al repositorio de análisis sobre **Casa Pellas**! Este espacio está dedicado a recopilar información, datos de mercado y la trayectoria de una de las empresas líderes en el sector automotriz y de distribución en Nicaragua.
+
+---
+
+## 📌 Índice
+1. [Sobre Casa Pellas](#-sobre-casa-pellas)
+2. [Marcas Principales](#-marcas-principales)
+3. [Impacto Económico y Social](#-impacto-económico-y-social)
+4. [Tecnologías y Modernización](#-tecnologías-y-modernización)
+5. [Contribuciones](#-contribuciones)
+
+---
+
+## 🏢 Sobre Casa Pellas
+
+Fundada en **1913**, Casa Pellas ha sido un pilar fundamental en el desarrollo económico de Nicaragua. Lo que comenzó como un negocio familiar de importación se transformó en el distribuidor exclusivo de marcas de prestigio mundial.
+
+* **Misión:** Proveer soluciones de movilidad y servicios de alta calidad que superen las expectativas de nuestros clientes.
+* **Visión:** Mantener el liderazgo en el mercado nacional, innovando en la experiencia del cliente y la sostenibilidad.
+
+---
+
+## 🚗 Marcas Principales
+
+Casa Pellas es reconocida principalmente por su portafolio de vehículos y maquinaria:
+
+| Sector | Marcas Destacadas |
+| :--- | :--- |
+| **Automóviles** | Toyota, Suzuki, Lexus |
+| **Comercial / Carga** | Hino, Toyota Commercial |
+| **Motocicletas** | Yamaha |
+| **Lubricantes y Repuestos** | ExxonMobil, repuestos genuinos |
+
+---
+
+## 🌱 Impacto Económico y Social
+
+Más allá de los negocios, el grupo se destaca por su enfoque en **Responsabilidad Social Empresarial (RSE)**:
+
+* **Educación Vial:** Campañas constantes para la prevención de accidentes y el manejo seguro.
+* **Desarrollo Comunitario:** Apoyo a clínicas médicas y programas educativos en las zonas donde operan sus sucursales.
+* **Sostenibilidad:** Iniciativas para el manejo responsable de desechos de talleres (aceites, baterías y llantas).
+
+---
+
+## 💻 Tecnologías y Modernización
+
+*(Nota: Si este repositorio es para un proyecto de software/datos, puedes detallar esta sección)*
+
+Este proyecto analiza cómo una empresa centenaria se adapta a la era digital:
+* **CRM e Inteligencia de Negocios:** Optimización de la atención al cliente y seguimiento de postventa.
+* **E-commerce:** Plataformas digitales para la cotización de vehículos y compra de repuestos en línea.
+* **Análisis de Datos:** Modelos predictivos para el inventario de repuestos según la demanda del parque vehicular nicaragüense.
+
+---
+
+## 🤝 Contribuciones
+
+Este es un proyecto con fines educativos e informativos. Si deseas agregar datos, análisis de mercado o mejorar el formato:
+
+1. Haz un **Fork** al proyecto.
+2. Crea una nueva rama (`git checkout -b feature/nueva-mejora`).
+3. Haz un **Commit** con tus cambios (`git commit -m 'Añadida información sobre sucursales'`).
+4. Haz un **Push** a la rama (`git push origin feature/nueva-mejora`).
+5. Abre un **Pull Request**.
+
+---
+
+*Descargo de responsabilidad: Este repositorio no está afiliado, asociado, autorizado ni respaldado oficialmente por Casa Pellas S.A.*
