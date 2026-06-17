@@ -6,268 +6,262 @@
 <title>Casa Pellas - Catálogo de Vehículos</title>
 
 <style>
-body{
-    font-family: Arial, sans-serif;
+*{
     margin:0;
-    background:#f4f4f4;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
 }
 
 header{
-    background:#003366;
-    color:white;
+    background:#002f6c;
+    color:#fff;
     text-align:center;
     padding:25px;
 }
 
-nav{
-    background:#0055a5;
-    text-align:center;
-    padding:15px;
+header h1{
+    font-size:2.5rem;
 }
 
-nav a{
+.banner{
+    background:#0056b3;
     color:white;
-    text-decoration:none;
-    margin:10px;
-    font-weight:bold;
-}
-
-.hero{
     text-align:center;
-    padding:40px;
-    background:white;
+    padding:40px 20px;
 }
 
-.autos{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-    padding:30px;
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:30px auto;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
 }
 
 .card{
     background:white;
-    width:300px;
-    border-radius:10px;
+    border-radius:12px;
     overflow:hidden;
-    box-shadow:0 3px 10px rgba(0,0,0,.2);
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
 }
 
 .card img{
     width:100%;
-    height:200px;
+    height:220px;
     object-fit:cover;
 }
 
-.card h3{
-    text-align:center;
-    color:#003366;
+.card-content{
+    padding:20px;
 }
 
-.card p{
-    padding:0 15px;
+.card h3{
+    color:#002f6c;
+    margin-bottom:10px;
+}
+
+.price{
+    color:#0a8f08;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:15px;
 }
 
 .btn{
     width:100%;
-    border:none;
-    background:#0055a5;
+    background:#0056b3;
     color:white;
+    border:none;
     padding:12px;
     cursor:pointer;
+    border-radius:5px;
     font-size:16px;
 }
 
 .btn:hover{
-    background:#003366;
+    background:#003d80;
 }
 
 footer{
-    background:#003366;
+    background:#002f6c;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
+    margin-top:30px;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+}
+
+.modal-content{
+    background:white;
+    max-width:650px;
+    margin:8% auto;
+    padding:25px;
+    border-radius:10px;
+}
+
+.close{
+    float:right;
+    font-size:30px;
+    cursor:pointer;
+    color:red;
 }
 </style>
 </head>
-
 <body>
 
 <header>
     <h1>CASA PELLAS</h1>
-    <p>Venta de Vehículos Toyota, Suzuki y Yamaha</p>
+    <p>Vehículos Toyota, Suzuki y Yamaha</p>
 </header>
 
-<nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#vehiculos">Vehículos</a>
-    <a href="#contacto">Contacto</a>
-</nav>
-
-<section class="hero" id="inicio">
-    <h2>Bienvenido a Casa Pellas</h2>
-    <p>Encuentra el vehículo ideal para ti.</p>
+<section class="banner">
+    <h2>Catálogo de Vehículos</h2>
+    <p>Consulta precios y especificaciones.</p>
 </section>
 
-<section class="autos" id="vehiculos">
+<div class="container">
+
+<div class="grid">
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800" alt="Toyota Yaris">
-        <h3>Toyota Yaris 2026</h3>
-        <p>Automóvil compacto y económico.</p>
-        <button class="btn" onclick="mostrarToyotaYaris()">Ver Precio y Detalles</button>
+        <img src="img/toyota-yaris.jpg" alt="Toyota Yaris">
+        <div class="card-content">
+            <h3>Toyota Yaris</h3>
+            <div class="price">C$ 842,360</div>
+            <button class="btn"
+            onclick="mostrar('Toyota Yaris',
+            'Precio: C$ 842,360<br><br>Motor 1.5L<br>Transmisión automática<br>Aire acondicionado<br>Pantalla multimedia<br>Capacidad para 5 pasajeros')">
+            Ver Detalles
+            </button>
+        </div>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800" alt="Toyota Corolla Cross">
-        <h3>Toyota Corolla Cross</h3>
-        <p>SUV moderna y espaciosa.</p>
-        <button class="btn" onclick="mostrarCorollaCross()">Ver Precio y Detalles</button>
+        <img src="img/toyota-corolla-cross.jpg" alt="Toyota Corolla Cross">
+        <div class="card-content">
+            <h3>Toyota Corolla Cross</h3>
+            <div class="price">C$ 1,412,950</div>
+            <button class="btn"
+            onclick="mostrar('Toyota Corolla Cross',
+            'Precio: C$ 1,412,950<br><br>Motor 2.0L<br>SUV Familiar<br>Cámara de retroceso<br>6 airbags<br>Pantalla táctil')">
+            Ver Detalles
+            </button>
+        </div>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800" alt="Suzuki Alto">
-        <h3>Suzuki Alto</h3>
-        <p>Ideal para la ciudad.</p>
-        <button class="btn" onclick="mostrarSuzukiAlto()">Ver Precio y Detalles</button>
+        <img src="img/suzuki-alto.jpg" alt="Suzuki Alto">
+        <div class="card-content">
+            <h3>Suzuki Alto</h3>
+            <div class="price">C$ 457,450</div>
+            <button class="btn"
+            onclick="mostrar('Suzuki Alto',
+            'Precio: C$ 457,450<br><br>Motor 800cc<br>Bajo consumo<br>Aire acondicionado<br>Ideal para ciudad')">
+            Ver Detalles
+            </button>
+        </div>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800" alt="Suzuki Swift">
-        <h3>Suzuki Swift</h3>
-        <p>Diseño deportivo y moderno.</p>
-        <button class="btn" onclick="mostrarSuzukiSwift()">Ver Precio y Detalles</button>
+        <img src="img/suzuki-swift.jpg" alt="Suzuki Swift">
+        <div class="card-content">
+            <h3>Suzuki Swift</h3>
+            <div class="price">C$ 658,900</div>
+            <button class="btn"
+            onclick="mostrar('Suzuki Swift',
+            'Precio: C$ 658,900<br><br>Motor 1.2L<br>Diseño deportivo<br>Pantalla multimedia<br>Transmisión automática')">
+            Ver Detalles
+            </button>
+        </div>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800" alt="Yamaha FZ 150">
-        <h3>Yamaha FZ 150</h3>
-        <p>Motocicleta deportiva.</p>
-        <button class="btn" onclick="mostrarYamahaFZ()">Ver Precio y Detalles</button>
+        <img src="img/yamaha-fz150.jpg" alt="Yamaha FZ150">
+        <div class="card-content">
+            <h3>Yamaha FZ 150</h3>
+            <div class="price">C$ 119,500</div>
+            <button class="btn"
+            onclick="mostrar('Yamaha FZ 150',
+            'Precio: C$ 119,500<br><br>Motor 150cc<br>Inyección electrónica<br>Frenos de disco<br>Tablero digital')">
+            Ver Detalles
+            </button>
+        </div>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=800" alt="Yamaha XTZ 125">
-        <h3>Yamaha XTZ 125</h3>
-        <p>Doble propósito para cualquier terreno.</p>
-        <button class="btn" onclick="mostrarYamahaXTZ()">Ver Precio y Detalles</button>
+        <img src="img/yamaha-xtz125.jpg" alt="Yamaha XTZ125">
+        <div class="card-content">
+            <h3>Yamaha XTZ 125</h3>
+            <div class="price">C$ 115,000</div>
+            <button class="btn"
+            onclick="mostrar('Yamaha XTZ 125',
+            'Precio: C$ 115,000<br><br>Motor 125cc<br>Doble propósito<br>Ideal para ciudad y campo')">
+            Ver Detalles
+            </button>
+        </div>
     </div>
 
-</section>
+</div>
 
-<footer id="contacto">
+</div>
+
+<footer>
     <h2>Contacto</h2>
     <p><strong>Julio Urbina</strong></p>
-    <p>📞 84251612</p>
-    <p>Asesor de ventas Toyota, Suzuki y Yamaha.</p>
+    <p>Teléfono: 84251612</p>
+    <p>Asesor de ventas.</p>
 </footer>
 
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrar()">&times;</span>
+        <h2 id="titulo"></h2>
+        <br>
+        <div id="detalle"></div>
+    </div>
+</div>
+
 <script>
-
-function mostrarToyotaYaris(){
-    alert(
-`TOYOTA YARIS 2026
-
-Precio: C$842,360
-
-Motor: 1.5L
-Transmisión: Automática
-Combustible: Gasolina
-Aire acondicionado
-Pantalla multimedia
-5 pasajeros
-
-Contacto:
-Julio Urbina
-84251612`);
+function mostrar(titulo, detalle){
+    document.getElementById("titulo").innerHTML = titulo;
+    document.getElementById("detalle").innerHTML = detalle;
+    document.getElementById("modal").style.display = "block";
 }
 
-function mostrarCorollaCross(){
-    alert(
-`TOYOTA COROLLA CROSS
-
-Precio: C$1,412,950
-
-Motor: 2.0L
-SUV Familiar
-Transmisión CVT
-6 Airbags
-Pantalla táctil
-Cámara de retroceso
-
-Contacto:
-Julio Urbina
-84251612`);
+function cerrar(){
+    document.getElementById("modal").style.display = "none";
 }
 
-function mostrarSuzukiAlto(){
-    alert(
-`SUZUKI ALTO
-
-Precio: C$457,450
-
-Motor: 800cc
-Excelente rendimiento
-Aire acondicionado
-Bajo consumo
-5 pasajeros
-
-Contacto:
-Julio Urbina
-84251612`);
+window.onclick = function(event){
+    const modal = document.getElementById("modal");
+    if(event.target === modal){
+        modal.style.display = "none";
+    }
 }
-
-function mostrarSuzukiSwift(){
-    alert(
-`SUZUKI SWIFT
-
-Precio: C$658,900
-
-Motor: 1.2L
-Pantalla multimedia
-Diseño deportivo
-Bajo consumo
-Transmisión automática
-
-Contacto:
-Julio Urbina
-84251612`);
-}
-
-function mostrarYamahaFZ(){
-    alert(
-`YAMAHA FZ 150
-
-Precio: C$119,500
-
-Motor: 150cc
-Inyección electrónica
-Frenos de disco
-Tablero digital
-
-Contacto:
-Julio Urbina
-84251612`);
-}
-
-function mostrarYamahaXTZ(){
-    alert(
-`YAMAHA XTZ 125
-
-Precio: C$115,000
-
-Motor: 125cc
-Doble propósito
-Ideal para ciudad y campo
-Bajo consumo
-
-Contacto:
-Julio Urbina
-84251612`);
-}
-
 </script>
 
 </body>
-</html>
+</html>/img/toyota-yaris.jpg
+/img/toyota-corolla-cross.jpg
+/img/suzuki-alto.jpg
+/img/suzuki-swift.jpg
+/img/yamaha-fz150.jpg
+/img/yamaha-xtz125.jpg
