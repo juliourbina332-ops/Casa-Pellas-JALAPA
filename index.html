@@ -1,80 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Pellas - Catálogo de Vehículos</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f4f4;
+}
+
+header{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+nav{
+    background:#0055a5;
+    text-align:center;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-weight:bold;
+}
+
+.hero{
+    text-align:center;
+    padding:40px;
+    background:white;
+}
+
+.autos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    width:300px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card h3{
+    text-align:center;
+    color:#003366;
+}
+
+.card p{
+    padding:0 15px;
+}
+
+.btn{
+    width:100%;
+    border:none;
+    background:#0055a5;
+    color:white;
+    padding:12px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.btn:hover{
+    background:#003366;
+}
+
+footer{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>CASA PELLAS</h1>
+    <p>Venta de Vehículos Toyota, Suzuki y Yamaha</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#vehiculos">Vehículos</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section class="hero" id="inicio">
+    <h2>Bienvenido a Casa Pellas</h2>
+    <p>Encuentra el vehículo ideal para ti.</p>
+</section>
+
 <section class="autos" id="vehiculos">
 
-    <!-- TOYOTA -->
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341" alt="Toyota Yaris">
+        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800" alt="Toyota Yaris">
         <h3>Toyota Yaris 2026</h3>
-        <p>
-            <strong>Precio:</strong> C$842,360<br>
-            Motor eficiente, transmisión automática,
-            aire acondicionado, excelente consumo de combustible.
-        </p>
-        <a href="#" class="btn">Solicitar Cotización</a>
+        <p>Automóvil compacto y económico.</p>
+        <button class="btn" onclick="mostrarToyotaYaris()">Ver Precio y Detalles</button>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c" alt="Toyota Corolla Cross">
+        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800" alt="Toyota Corolla Cross">
         <h3>Toyota Corolla Cross</h3>
-        <p>
-            <strong>Precio:</strong> C$1,412,950<br>
-            SUV moderna, amplio espacio interior,
-            tecnología avanzada y máxima seguridad.
-        </p>
-        <a href="#" class="btn">Solicitar Cotización</a>
+        <p>SUV moderna y espaciosa.</p>
+        <button class="btn" onclick="mostrarCorollaCross()">Ver Precio y Detalles</button>
     </div>
 
-    <!-- SUZUKI -->
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d" alt="Suzuki Alto">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800" alt="Suzuki Alto">
         <h3>Suzuki Alto</h3>
-        <p>
-            <strong>Precio:</strong> C$457,450<br>
-            Compacto, económico y perfecto para la ciudad.
-            Bajo consumo y mantenimiento accesible.
-        </p>
-        <a href="#" class="btn">Solicitar Cotización</a>
+        <p>Ideal para la ciudad.</p>
+        <button class="btn" onclick="mostrarSuzukiAlto()">Ver Precio y Detalles</button>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7" alt="Suzuki Swift">
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800" alt="Suzuki Swift">
         <h3>Suzuki Swift</h3>
-        <p>
-            <strong>Precio:</strong> Desde C$658,900<br>
-            Diseño deportivo, pantalla multimedia,
-            gran rendimiento y confort.
-        </p>
-        <a href="#" class="btn">Solicitar Cotización</a>
+        <p>Diseño deportivo y moderno.</p>
+        <button class="btn" onclick="mostrarSuzukiSwift()">Ver Precio y Detalles</button>
     </div>
 
-    <!-- YAMAHA -->
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39" alt="Yamaha FZ 150">
+        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800" alt="Yamaha FZ 150">
         <h3>Yamaha FZ 150</h3>
-        <p>
-            <strong>Precio:</strong> C$119,500<br>
-            Motocicleta deportiva, ideal para uso diario,
-            potente y de bajo consumo.
-        </p>
-        <a href="#" class="btn">Solicitar Cotización</a>
+        <p>Motocicleta deportiva.</p>
+        <button class="btn" onclick="mostrarYamahaFZ()">Ver Precio y Detalles</button>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65" alt="Yamaha XTZ 125">
+        <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=800" alt="Yamaha XTZ 125">
         <h3>Yamaha XTZ 125</h3>
-        <p>
-            <strong>Precio:</strong> C$115,000<br>
-            Motocicleta doble propósito,
-            perfecta para ciudad y caminos rurales.
-        </p>
-        <a href="#" class="btn">Solicitar Cotización</a>
+        <p>Doble propósito para cualquier terreno.</p>
+        <button class="btn" onclick="mostrarYamahaXTZ()">Ver Precio y Detalles</button>
     </div>
 
 </section>
 
 <footer id="contacto">
-    <h2>Contacto de Ventas</h2>
-    <p><strong>Asesor:</strong> Julio Urbina</p>
-    <p><strong>Teléfono:</strong> 84251612</p>
-    <p>Atención personalizada para vehículos Toyota, Suzuki y Yamaha.</p>
-    <p>&copy; 2026 Catálogo Casa Pellas</p>
+    <h2>Contacto</h2>
+    <p><strong>Julio Urbina</strong></p>
+    <p>📞 84251612</p>
+    <p>Asesor de ventas Toyota, Suzuki y Yamaha.</p>
 </footer>
+
+<script>
+
+function mostrarToyotaYaris(){
+    alert(
+`TOYOTA YARIS 2026
+
+Precio: C$842,360
+
+Motor: 1.5L
+Transmisión: Automática
+Combustible: Gasolina
+Aire acondicionado
+Pantalla multimedia
+5 pasajeros
+
+Contacto:
+Julio Urbina
+84251612`);
+}
+
+function mostrarCorollaCross(){
+    alert(
+`TOYOTA COROLLA CROSS
+
+Precio: C$1,412,950
+
+Motor: 2.0L
+SUV Familiar
+Transmisión CVT
+6 Airbags
+Pantalla táctil
+Cámara de retroceso
+
+Contacto:
+Julio Urbina
+84251612`);
+}
+
+function mostrarSuzukiAlto(){
+    alert(
+`SUZUKI ALTO
+
+Precio: C$457,450
+
+Motor: 800cc
+Excelente rendimiento
+Aire acondicionado
+Bajo consumo
+5 pasajeros
+
+Contacto:
+Julio Urbina
+84251612`);
+}
+
+function mostrarSuzukiSwift(){
+    alert(
+`SUZUKI SWIFT
+
+Precio: C$658,900
+
+Motor: 1.2L
+Pantalla multimedia
+Diseño deportivo
+Bajo consumo
+Transmisión automática
+
+Contacto:
+Julio Urbina
+84251612`);
+}
+
+function mostrarYamahaFZ(){
+    alert(
+`YAMAHA FZ 150
+
+Precio: C$119,500
+
+Motor: 150cc
+Inyección electrónica
+Frenos de disco
+Tablero digital
+
+Contacto:
+Julio Urbina
+84251612`);
+}
+
+function mostrarYamahaXTZ(){
+    alert(
+`YAMAHA XTZ 125
+
+Precio: C$115,000
+
+Motor: 125cc
+Doble propósito
+Ideal para ciudad y campo
+Bajo consumo
+
+Contacto:
+Julio Urbina
+84251612`);
+}
+
+</script>
+
+</body>
+</html>
